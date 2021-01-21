@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+
+.Header__not-logged-in,
+.Header__logged-in {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Header__not-logged-in a,
+.Header__logged-in a {
+    border-radius: 30px;
+    border: 2px rgb(136, 33, 33) solid;
+    outline: none;
+    padding: 5px 15px;
+    background-color: white;
+    color: rgb(136, 33, 33);
+    box-shadow: -1px -1px 42px 1px rgb(136, 33, 33);
+}
+
+.Header__not-logged-in a:hover,
+.Header__logged-in a:hover {
+    background-color: rgb(136, 33, 33);
+    color: white;
+    box-shadow: none;
+}
+
+.main_div {
+    height: 50vh;
+    margin: 5% 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(136, 33, 33);
+    border-radius: 15px;
+    color: whitesmoke;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+}
+
+.getstarted {
+    border-radius: 30px;
+    border: 2px white solid;
+    outline: none;
+    padding: 5px 15px;
+    background-color: white;
+    color: rgb(136, 33, 33);
+    box-shadow: -1px -1px 42px 1px white;
+}
+
+.getstarted:hover {
+    background-color: rgb(136, 33, 33);
+    color: white;
+    box-shadow: none;
+}
+
+.sub {
+    padding: 0 20%;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+
+}
+
+.title {
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.sub_buttons {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.RegistrationForm {
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    margin: 10% auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+}
+
+.inputDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 110px;
+}
+
+.inputDiv input {
+    padding: 10px;
+}
+
+.RegistrationForm input[type=submit] {
+    outline: none;
+    padding: 5px 15px;
+    color: white;
+    background-color: rgb(136, 33, 33);
+    border: 2px white solid;
+    box-shadow: -1px -1px 12px 3px rgb(136, 33, 33);
+    font-size: 15px;
+    border-radius: 30px;
+}
+
+.RegistrationForm input[type="submit"]:hover {
+    color: rgb(136, 33, 33);
+    background-color: white;
+}
+
+.col_theme {
+    color: rgb(136, 33, 33);
+}
+
+
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
