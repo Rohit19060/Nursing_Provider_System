@@ -7,19 +7,19 @@
 </head>
 
 <body>
-
     <?php
-    session_start();
-    if (isset($_SESSION["h_id"]) && isset($_SESSION["m_id"])) {
+    include_once("./includes/function.php");
+    if (isset($_SESSION["h_id"]) || isset($_SESSION["m_id"])) {
         $_SESSION["message"] = "Your can't go back to login page";
-        header("Location: index.php");
+        redirect();
     }
     ?>
-    <form method="post" class="RegistrationForm">
-        <h2 class=" mb-3 mt-3">
+    <form method="POST" class="RegistrationForm" action="register_logic.php">
+        <h2 class="mb-3 mt-3">
             <a href="index.php">Nursing Provider System</a>
         </h2>
-        <h1 class="mb-3 mt-3 col_theme">Register</h1>
+        <h1 class=" mt-3 col_theme">Register</h1>
+        <?php echo message(); ?>
         <div class="inputDiv">
             <label for="username">Name:</label>
             <input type="text" name="username" required />
@@ -36,13 +36,19 @@
             <label for="password2">Confirm Password:</label>
             <input type="password" name="password2" required />
         </div>
+        <div>As:
+            <input type="radio" name="type" id="freelancer" value="freelancer" required />
+            <label for="freelancer">Freelancer</label>
+            <input type="radio" name="type" id="management" value="management" required />
+            <label for="management">Management</label>
+        </div>
         <div class="text-center mb-3 mt-3">
             <a href="login.php" class="col_theme">
                 Log In Instead
             </a>
         </div>
         <div class="text-center mb-2">
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" name="submit" />
         </div>
     </form>
 </body>

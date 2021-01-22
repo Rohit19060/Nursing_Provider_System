@@ -1,13 +1,13 @@
 <?php
-session_start();
-if (isset($_SESSION["user_id"]) || isset($_SESSION["admin_id"])) {
+include_once("includes/function.php");
+if (isset($_SESSION["h_id"]) || isset($_SESSION["m_id"])) {
     foreach ($_SESSION as $key => $value) {
-        echo $_SESSION[$key] = null;
+        $_SESSION[$key] = null;
     }
     $_SESSION["message"] = "Logged Out Successfully";
-    header("Location: index.php");
+    redirect("index.php");
 } else {
     // Logged out
     $_SESSION["message"] = "Your are not Authorized to access this page";
-    header("Location: index.php");
+    redirect("index.php");
 }

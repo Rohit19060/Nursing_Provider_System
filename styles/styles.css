@@ -70,7 +70,7 @@ a {
     box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
 }
 
-.getstarted {
+.getStarted {
     border-radius: 30px;
     border: 2px white solid;
     outline: none;
@@ -80,7 +80,7 @@ a {
     box-shadow: -1px -1px 42px 1px white;
 }
 
-.getstarted:hover {
+.getStarted:hover {
     background-color: rgb(136, 33, 33);
     color: white;
     box-shadow: none;

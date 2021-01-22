@@ -1,12 +1,9 @@
 <?php
-
-
+include_once("includes/function.php");
 if (!isset($_SESSION["h_id"])) {
-    $_SESSION["message"] = "You need to login to access this page";
-    header("Location: login.php");
+    $_SESSION["message"] = "You need to login first";
+    redirect("login.php");
 }
 
-if (isset($_SESSION["h_id"]) && isset($_SESSION["message"])) {
-    echo "<h2 style='color: red'>" . $_SESSION["message"] . "</h2>";
-    $_SESSION["message"] = null;
-}
+include_once("includes/header.php");
+echo message();
