@@ -16,7 +16,13 @@ if (isset($_POST["submit"])) {
     $query_insert .= "'$name','$email','$password1')";
 
     if (mysqli_query($connection, $query_insert)) {
-        $_SESSION["h_id"] = mysqli_insert_id($connection);
+
+        if ($_POST["type"] == "freelancer") {
+            $_SESSION["h_id"] = mysqli_insert_id($connection);
+        } else {
+            $_SESSION["m_id"] = mysqli_insert_id($connection);
+        }
+
         $_SESSION["name"] = $name;
         $_SESSION["message"] = "$name Registered & Logged In Successfully";
         redirect("index.php");

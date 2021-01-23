@@ -10,20 +10,20 @@ if (isset($_POST["submit"])) {
     $result = mysqli_query($connection, $query_login);
     $num = mysqli_num_rows($result);
     if ($num) {
-        while ($user = mysqli_fetch_assoc($result)) {
-            if ($user["password"] == $password) {
-                if ($type == "freelancer") {
-                    $_SESSION["h_id"] = $user["h_id"];
-                } else {
-                    $_SESSION["m_id"] = $user["m_id"];
-                }
-                $_SESSION["name"] = $user["name"];
-                $_SESSION["message"] = "Logged In Successfully";
-                redirect("index.php");
+        $user = mysqli_fetch_assoc($result);
+        if ($user["password"] == $password) {
+            if ($type == "freelancer") {
+                $_SESSION["h_id"] = $user["h_id"];
+            } else {
+                $_SESSION["m_id"] = $user["m_id"];
             }
+            $_SESSION["name"] = $user["name"];
+            $_SESSION["message"] = "Logged In Successfully";
+            redirect("index.php");
+        } else {
+            $_SESSION["message"] = "Credentials not right try again";
+            redirect("login.php");
         }
-        $_SESSION["message"] = "Credentials not right try again";
-        redirect("login.php");
     } else {
         $_SESSION["message"] = "Credentials not right try again";
         redirect("login.php");

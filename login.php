@@ -21,17 +21,17 @@
         <h1 class="mb-3 mt-3 col_theme">Log In</h1>
         <?php echo message(); ?>
         <div class="inputDiv">
-            <label for="email">Email:</label>
+            <label for="email">Email</label>
             <input type="email" name="email" required />
         </div>
         <div class="inputDiv">
-            <label for="password">Password:</label>
+            <label for="password">Password</label>
             <input type="password" name="password" required />
         </div>
-        <div>As:
-            <input type="radio" name="type" id="freelancer" value="freelancer" required/>
+        <div>As
+            <input type="radio" name="type" id="freelancer" value="freelancer" required />
             <label for="freelancer">Freelancer</label>
-            <input type="radio" name="type" id="management" value="management" required/>
+            <input type="radio" name="type" id="management" value="management" required />
             <label for="management">Management</label>
         </div>
         <div class="text-center mb-3 mt-3">

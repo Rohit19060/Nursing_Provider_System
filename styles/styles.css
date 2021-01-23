@@ -21,25 +21,31 @@ a {
     text-decoration: none;
 }
 
-.Header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
+.col_theme {
+    color: rgb(136, 33, 33);
 }
 
+.mb-3 {
+    margin-bottom: 30px;
+}
 
+.mt-3 {
+    margin-top: 30px;
+}
 
-.Header__not-logged-in,
+.mb-2 {
+    margin-bottom: 20px;
+}
+
 .Header__logged-in {
     display: flex;
-    flex: 1;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
-.Header__not-logged-in a,
-.Header__logged-in a {
+.Header__logged-in a,
+#freelancers tr td a,
+form div input[type=submit] {
     border-radius: 30px;
     border: 2px rgb(136, 33, 33) solid;
     outline: none;
@@ -49,8 +55,9 @@ a {
     box-shadow: -1px -1px 42px 1px rgb(136, 33, 33);
 }
 
-.Header__not-logged-in a:hover,
-.Header__logged-in a:hover {
+.Header__logged-in a:hover,
+#freelancers tr td a:hover,
+form div input[type=submit]:hover {
     background-color: rgb(136, 33, 33);
     color: white;
     box-shadow: none;
@@ -87,10 +94,9 @@ a {
 }
 
 .sub {
-    padding: 0 20%;
+    padding: 0 15%;
     word-wrap: break-word;
     letter-spacing: 1px;
-
 }
 
 .title {
@@ -105,14 +111,19 @@ a {
     align-items: center;
 }
 
-.RegistrationForm {
+form {
     font-family: 'Roboto', sans-serif;
     max-width: 600px;
-    margin: 10% auto;
+    margin: 5% auto;
     text-align: center;
     padding: 10px;
     border-radius: 15px;
     box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+}
+
+form h1 {
+    color: rgb(136, 33, 33);
+    margin: 25px;
 }
 
 .inputDiv {
@@ -126,35 +137,37 @@ a {
     padding: 10px;
 }
 
-.RegistrationForm input[type=submit] {
-    outline: none;
-    padding: 5px 15px;
-    color: white;
+.hire_table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#freelancers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+#freelancers td,
+#freelancers th {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+#freelancers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#freelancers tr:hover {
+    background-color: #ddd;
+}
+
+#freelancers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
     background-color: rgb(136, 33, 33);
-    border: 2px white solid;
-    box-shadow: -1px -1px 12px 3px rgb(136, 33, 33);
-    font-size: 15px;
-    border-radius: 30px;
-}
-
-.RegistrationForm input[type="submit"]:hover {
-    color: rgb(136, 33, 33);
-    background-color: white;
-}
-
-.col_theme {
-    color: rgb(136, 33, 33);
-}
-
-
-.mb-3 {
-    margin-bottom: 30px;
-}
-
-.mt-3 {
-    margin-top: 30px;
-}
-
-.mb-2 {
-    margin-bottom: 20px;
+    color: white;
 }

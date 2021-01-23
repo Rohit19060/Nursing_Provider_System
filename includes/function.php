@@ -14,7 +14,7 @@ function message()
 function username()
 {
     if (isset($_SESSION["name"])) {
-        $output = "<h3 class='mb-3 mt-3 error-message text-center'> Welcome ";
+        $output = "<h3 class='mb-3 mt-3 error-message text-center'>";
         $output .= htmlentities($_SESSION["name"]);
         $output .= "</h3>";
         return $output;

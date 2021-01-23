@@ -21,22 +21,22 @@
         <h1 class=" mt-3 col_theme">Register</h1>
         <?php echo message(); ?>
         <div class="inputDiv">
-            <label for="username">Name:</label>
+            <label for="username">Name</label>
             <input type="text" name="username" required />
         </div>
         <div class="inputDiv">
-            <label for="email">Email:</label>
+            <label for="email">Email</label>
             <input type="email" name="email" required />
         </div>
         <div class="inputDiv">
-            <label for="password1">Password:</label>
+            <label for="password1">Password</label>
             <input type="password" name="password1" required />
         </div>
         <div class="inputDiv">
-            <label for="password2">Confirm Password:</label>
+            <label for="password2">Confirm Password</label>
             <input type="password" name="password2" required />
         </div>
-        <div>As:
+        <div>As
             <input type="radio" name="type" id="freelancer" value="freelancer" required />
             <label for="freelancer">Freelancer</label>
             <input type="radio" name="type" id="management" value="management" required />

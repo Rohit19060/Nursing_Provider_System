@@ -3,6 +3,7 @@ include_once("./includes/function.php");
 require_once("./includes/db.php");
 include_once("./includes/header.php");
 echo message();
+echo username();
 ?>
 <div class="main_div">
     <h1 class="text-center title">Time to Get Working</h1>
