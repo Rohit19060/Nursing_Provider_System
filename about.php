@@ -1,4 +1,5 @@
 <?php
+include_once("./includes/function.php");
 include_once("./includes/Header.php");
 ?>
 <h1 class="text-center mt-3">About Us</h1>

@@ -10,6 +10,15 @@ function message()
         return $output;
     }
 }
+function message2()
+{
+    if (isset($_SESSION["message2"])) {
+        $output = "<h2 class='mb-3 mt-3 error-message text-center'>";
+        $output .= htmlentities($_SESSION["message2"]);
+        $output .= "</h2>";
+        return $output;
+    }
+}
 
 function username()
 {

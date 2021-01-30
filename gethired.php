@@ -13,8 +13,20 @@ $q = "SELECT * FROM freelancer where h_id = '$h_id'";
 $result = mysqli_query($connection, $q);
 $num = mysqli_num_rows($result);
 if ($num) {
-    $user = mysqli_fetch_assoc($result)
+    $user = mysqli_fetch_assoc($result);
+    if ($user["hired"] != 0) {
+        $hirer_id = $user["hired"];
+        $q_management = "SELECT * FROM management WHERE `m_id`=$hirer_id";
+        $result_manage = mysqli_query($connection, $q_management);
+        $num_manage = mysqli_num_rows($result_manage);
+        if ($num_manage) {
+            $manager = mysqli_fetch_assoc($result_manage);
+            $hirer = $manager["name"];
+            $_SESSION["message2"] = "You are Hired by $hirer";
+        }
+    }
 ?>
+    <?php echo message2(); ?>
     <form action="update.php?table=1" method="post">
         <h1>Update</h1>
         <?php echo message(); ?>
@@ -42,6 +54,17 @@ if ($num) {
             <input type="submit" value="Submit" name="submit" />
         </div>
     </form>
+    <form action="delete.php?table=1" method="post">
+        <h1>Delete</h1>
+        <div class="inputDiv">
+            <label for="password1">Current Password</label>
+            <input type="password" name="password" required />
+        </div>
+        <div class="text-center mb-2 mt-3">
+            <input type="submit" value="Submit" name="submit" />
+        </div>
+    </form>
+
 <?php
 }
 ?>
@@ -49,15 +72,5 @@ if ($num) {
 
 
 
-<form action="delete.php?table=1" method="post">
-    <h1>Delete</h1>
-    <div class="inputDiv">
-        <label for="password1">Current Password</label>
-        <input type="password" name="password" required />
-    </div>
-    <div class="text-center mb-2 mt-3">
-        <input type="submit" value="Submit" name="submit" />
-    </div>
-</form>
 
 <?php include_once("includes/footer.php"); ?>

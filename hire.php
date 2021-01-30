@@ -19,7 +19,7 @@ $num = mysqli_num_rows($result);
 if ($num) {
 ?>
     <div class="mt-3">&nbsp;</div>
-    <h2 class="text-center mt-3 mb-3">Freelancers</h2>
+    <h2 class="text-center mb-3">Freelancers</h2>
     <div class="hire_table">
         <table id="freelancers">
             <tr>
@@ -32,7 +32,12 @@ if ($num) {
             echo "<tr>";
             echo "<td>" . $user["name"] . "</td>";
             echo "<td>" . $user["email"] . "</td>";
-            echo "<td><a href='hireFreelancer.php?id=" . $user["h_id"] . "'> Hire Me! </a> </td>";
+            if ($user["hired"] == 0) {
+                echo "<td><a href='hireFreelancer.php?id=" . $user["h_id"] . "'> Hire Me! </a> </td>";
+            } else {
+                echo "<td>Already Hired</td>";
+            }
+
             echo "</tr>";
         }
     }

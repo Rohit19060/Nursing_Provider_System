@@ -7,14 +7,14 @@
 </head>
 
 <body>
-    <div class="text-center mb-3 mt-3">
-        <a href="index.php">
-            <h1>Nursing Provider System</h1>
-        </a>
-    </div>
+    <header class="pb-2">
+        <div class="text-center mb-3">
+            <a href="index.php">
+                <h1>Nursing Provider System</h1>
+            </a>
+        </div>
 
-    <header>
-        <div class="Header__logged-in">
+        <div class="logged-in">
             <a href="about.php">
                 About Us
             </a>
