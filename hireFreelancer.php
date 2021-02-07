@@ -20,7 +20,7 @@ if (isset($_GET["id"]) && isset($_SESSION["m_id"])) {
             $_SESSION["message"] = "$freelancer_name hired Successfully";
         }
 
-        redirect("hire.php");
+        redirect("payment.php");
     } else {
         $_SESSION["message"] = "$freelancer_id hire Unsuccessful";
         redirect("hire.php");

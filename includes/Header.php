@@ -15,26 +15,20 @@
         </div>
 
         <div class="logged-in">
-            <a href="about.php">
-                About Us
-            </a>
-            <a href="contact.php">
-                Contact Us
-            </a>
             <?php
             if (isset($_SESSION["h_id"]) || isset($_SESSION["m_id"])) {
             ?>
                 <?php
                 if (isset($_SESSION["m_id"])) {
-                    echo '<a href="hire.php">Profile</a>';
+                    echo '<a href="managementProfile.php">Profile</a>';
+                    echo '<a href="hire.php">Home</a>';
                 } else {
                     echo
-                    '<a href="getHired.php">Profile</a>';
+                    '<a href="freelancerProfile.php">Profile</a>
+                    <a href="getHired.php">Home</a>';
                 }
                 ?>
-                <a href="logout.php">
-                    Logout
-                </a>
+
             <?php
             } else {
             ?>
@@ -46,6 +40,18 @@
                 </a>
             <?php
             }
+            ?> <a href="about.php">
+                About Us
+            </a>
+            <a href="contact.php">
+                Contact Us
+            </a>
+
+            <?php if (isset($_SESSION["h_id"]) || isset($_SESSION["m_id"])) {
             ?>
+                <a href="logout.php">
+                    Logout
+                </a><?php
+                } ?>
         </div>
     </header>

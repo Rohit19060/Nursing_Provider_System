@@ -27,44 +27,23 @@ if ($num) {
     }
 ?>
     <?php echo message2(); ?>
-    <form action="update.php?table=1" method="post">
-        <h1>Update</h1>
-        <?php echo message(); ?>
-        <div class="inputDiv">
-            <label for="username">Name</label>
-            <input type="text" name="username" value="<?php echo $user["name"]; ?>" required />
-        </div>
-        <div class="inputDiv">
-            <label for="email">Email</label>
-            <input type="email" name="email" value="<?php echo $user["email"]; ?>" required />
-        </div>
-        <div class="inputDiv">
-            <label for="password1">Current Password</label>
-            <input type="password" name="password1" required />
-        </div>
-        <div class="inputDiv">
-            <label for="password2">New Password</label>
-            <input type="password" name="password2" required />
-        </div>
-        <div class="inputDiv">
-            <label for="password3">Confirm Password</label>
-            <input type="password" name="password3" required />
-        </div>
-        <div class="text-center mb-2 mt-3">
-            <input type="submit" value="Submit" name="submit" />
-        </div>
-    </form>
-    <form action="delete.php?table=1" method="post">
-        <h1>Delete</h1>
-        <div class="inputDiv">
-            <label for="password1">Current Password</label>
-            <input type="password" name="password" required />
-        </div>
-        <div class="text-center mb-2 mt-3">
-            <input type="submit" value="Submit" name="submit" />
-        </div>
-    </form>
 
+
+    <form class="Registration">
+        <h2 class='mt-3 mb-2'>Select Your skills</h2>
+        <div>
+            <input type="checkbox" id="skill1" name="skill1" value="Nursing">
+            <label for="skill1"> Nursing</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="skill2" name="skill2" value="Dressing">
+            <label for="skill2"> Dressing</label><br>
+        </div>
+
+        <div class="text-center mb-2 mt-3">
+            <input type="submit" value="Submit" name="submit" />
+        </div>
+    </form>
 <?php
 }
 ?>
