@@ -15,6 +15,7 @@ $num = mysqli_num_rows($result);
 if ($num) {
     $user = mysqli_fetch_assoc($result)
 ?>
+    <img src="./images/2.png" alt=".." class="zindeximg" width="60%">
     <form action="update.php?table=2" method="post">
         <h1>Update</h1>
         <?php echo message(); ?>

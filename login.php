@@ -4,6 +4,11 @@
 <head>
     <title>Nursing Provider System</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <style>
+        body {
+            background-image: url("./images/1.png");
+        }
+    </style>
 </head>
 
 <body>

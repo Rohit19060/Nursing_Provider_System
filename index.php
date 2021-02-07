@@ -5,6 +5,7 @@ include_once("./includes/header.php");
 echo message();
 echo username();
 ?>
+<img src="./images/2.png" alt=".." class="zindeximg" width="60%">
 <div class="main_div">
     <h1 class="text-center title">Welcome</h1>
     <h3 class="text-center sub">

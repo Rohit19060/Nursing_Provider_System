@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth !important;
+}
+
+
 .text-center {
     text-align: center;
 }
@@ -39,7 +44,6 @@ a {
 
 header {
     padding: 40px;
-    background-color: rgb(206, 206, 206);
 }
 
 .pb-2 {
@@ -52,7 +56,7 @@ header {
     justify-content: center;
 }
 
-.search input{
+.search input {
     padding: 10px;
 }
 
@@ -171,13 +175,8 @@ form h1 {
     padding: 12px;
 }
 
-.freelancers tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.freelancers tr:hover {
-    background-color: #ddd;
-}
+ 
+ 
 
 .freelancers th {
     padding-top: 12px;
@@ -220,4 +219,13 @@ li {
 textarea {
     width: 100%;
     padding: 15px;
+}
+
+.zindeximg {
+    z-index: -1;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
 }

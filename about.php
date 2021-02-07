@@ -2,6 +2,7 @@
 include_once("./includes/function.php");
 include_once("./includes/Header.php");
 ?>
+<img src="./images/2.png" alt=".." class="zindeximg" width="60%">
 <div class="main_div">
     <h1>About Us</h1>
     <h2>Mission</h2>

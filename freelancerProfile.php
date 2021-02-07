@@ -25,7 +25,7 @@ if ($num) {
             $_SESSION["message2"] = "You are Hired by $hirer";
         }
     }
-?>
+?><img src="./images/2.png" alt=".." class="zindeximg" width="60%">
     <?php echo message2(); ?>
     <form action="update.php?table=1" method="post">
         <h1>Update</h1>

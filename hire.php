@@ -25,7 +25,7 @@ require_once("./includes/db.php");
                     document.getElementById("output").innerHTML = this.responseText;
                 }
             }
-            xmlhttp.open("GET", "search.php?q=" + str );
+            xmlhttp.open("GET", "search.php?q=" + str);
             xmlhttp.send();
         }
     }
@@ -40,6 +40,7 @@ $result = mysqli_query($connection, $q);
 $num = mysqli_num_rows($result);
 if ($num) {
 ?>
+    <img src="./images/2.png" alt=".." class="zindeximg" width="60%">
     <div class="mt-3">&nbsp;</div>
     <h2 class="text-center mb-3">Freelancers</h2>
     <div class="hire_table">

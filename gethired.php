@@ -27,7 +27,7 @@ if ($num) {
     }
 ?>
     <?php echo message2(); ?>
-
+    <img src="./images/2.png" alt=".." class="zindeximg" width="60%">
 
     <form class="Registration">
         <h2 class='mt-3 mb-2'>Select Your skills</h2>
