@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
                 $_SESSION["m_id"] = $user["m_id"];
             }
             $_SESSION["name"] = $user["name"];
-            $_SESSION["message"] = "Logged In Successfully";
+            $_SESSION["message"] = "Signed In Successfully";
             redirect("index.php");
         } else {
             $_SESSION["message"] = "Credentials not right try again";

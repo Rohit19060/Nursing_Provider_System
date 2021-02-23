@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Nursing Provider System</title>
+    <title>Nursing Care</title>
     <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
@@ -17,14 +17,20 @@
         echo "<h2 class='inputDiv'>Payment Successful</h2>";
         echo "<a href='hire.php' class='inputDiv text-center mb-2'><button>Go Back</button></a>";
     } else {
-
     ?>
         <form method="post" class="RegistrationForm">
             <h2 class="mb-3 mt-3">
-                <a href="index.php">Nursing Provider System</a>
+                <a href="index.php">Nursing Care</a>
             </h2>
-            <h1 class="mb-3 mt-3 col_theme">Enter your Payment Details</h1>
- 
+            <h1 class="mb-3 mt-3 col_theme">Enter Hiring Details</h1>
+            <div class="inputDiv">
+                <label for="exp">Hiring Date</label>
+                <input type="month" name="exp" required />
+            </div>
+            <div class="inputDiv">
+                <label for="exp">Price 20 RM/hour</label>
+                <input type="text" name="exp" required readonly />RM
+            </div>
             <div class="inputDiv">
                 <label for="name">Name on card</label>
                 <input type="name" name="name" required />
@@ -46,7 +52,6 @@
                 <input type="submit" value="Submit" name="submit" />
             </div>
         </form>
-
     <?php  } ?>
 </body>
 

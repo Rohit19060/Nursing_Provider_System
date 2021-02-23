@@ -11,9 +11,25 @@ if (isset($_POST["submit"])) {
         $_SESSION["message"] = "Password in not same";
         redirect();
     }
-    $query_insert = "INSERT INTO {$_POST["type"]} (";
-    $query_insert .= " name, email, password) values (";
-    $query_insert .= "'$name','$email','$password1')";
+
+
+    if ($_POST["type"] == "freelancer") {
+
+        $dob = mysqli_preparation($_POST["dob"]);
+        $phone = mysqli_preparation($_POST["phone"]);
+        $address = mysqli_preparation($_POST["address"]);
+
+        $query_insert = "INSERT INTO `freelancer`(`name`, `email`, `password`,`dob`, `phone`, `address`) VALUES ('$name','$email','$password1','$dob','$phone','$address')";
+    } else {
+        $query_insert = "INSERT INTO `client` (";
+        $query_insert .= " name, email, password) values (";
+        $query_insert .= "'$name','$email','$password1')";
+    }
+
+
+
+
+echo $query_insert;
 
     if (mysqli_query($connection, $query_insert)) {
 
@@ -24,7 +40,7 @@ if (isset($_POST["submit"])) {
         }
 
         $_SESSION["name"] = $name;
-        $_SESSION["message"] = "$name Registered & Logged In Successfully";
+        $_SESSION["message"] = "$name Registered & Signed In Successfully";
         redirect("index.php");
     } else {
         $_SESSION["message"] = "Email Already exist Try Again!";

@@ -23,9 +23,9 @@ function message2()
 function username()
 {
     if (isset($_SESSION["name"])) {
-        $output = "<h3 class='mb-3 mt-3 error-message text-center'>";
-        $output .= htmlentities($_SESSION["name"]);
-        $output .= "</h3>";
+        $output = "<span class='text-center username'>";
+        $output .= ucwords(htmlentities($_SESSION["name"]));
+        $output .= "</span>";
         return $output;
     }
 }

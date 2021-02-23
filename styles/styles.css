@@ -8,7 +8,6 @@ html {
     scroll-behavior: smooth !important;
 }
 
-
 .text-center {
     text-align: center;
 }
@@ -27,7 +26,7 @@ a {
 }
 
 .col_theme {
-    color: rgb(136, 33, 33);
+    color: rgb(41, 115, 226);
 }
 
 .mb-3 {
@@ -43,7 +42,15 @@ a {
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 40px;
+    padding-left: 20%;
+}
+
+.logo {
+    margin-top: 15px;
 }
 
 .pb-2 {
@@ -65,21 +72,27 @@ header {
 form div input[type=submit],
 button {
     border-radius: 30px;
-    border: 2px rgb(136, 33, 33) solid;
+    border: 2px rgb(41, 115, 226) solid;
     outline: none;
-    padding: 5px 15px;
+    padding: 15px 15px;
     background-color: white;
-    color: rgb(136, 33, 33);
-    box-shadow: -1px -1px 42px 1px rgb(136, 33, 33);
+    color: rgb(41, 115, 226);
+    font-size: 24px;
+}
+
+form div input[type=submit] {
+    padding: 15px 20px;
+    font-size: 16px
 }
 
 .logged-in a:hover,
 .freelancers tr td a:hover,
 form div input[type=submit]:hover,
 button:hover {
-    background-color: rgb(136, 33, 33);
+    background-color: rgb(41, 115, 226);
     color: white;
     box-shadow: none;
+    box-shadow: -1px -1px 42px 1px rgb(41, 115, 226);
 }
 
 .main_div {
@@ -91,9 +104,70 @@ button:hover {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 15px;
-    color: rgb(136, 33, 33);
+    color: rgb(41, 115, 226);
     font-family: 'Arial Narrow Bold', sans-serif;
     box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+}
+
+.profile {
+    padding: 30px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+}
+
+.profile .myProfile span {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.profile .main_profile {
+    margin-top: 25px;
+    display: flex;
+}
+
+.profile .main_profile .profile_image img {
+    margin-top: 20px;
+}
+
+.profile .main_profile .profile_image {
+    width: 20%;
+}
+
+.profile .main_profile .profile_bio .heading1 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.profile .main_profile .profile_bio .heading2 {
+    font-size: 14px;
+}
+
+.profile .dummy {
+    min-width: 20%;
+}
+
+.profile .main_profile .profile_bio {
+    width: 40%;
+}
+
+.profile .main_profile .profile_details div span:first-child {
+    background-color: red;
+    padding: 5px;
+    color: white;
+}
+
+.profile .main_profile .profile_details div {
+    margin: 20px;
+}
+
+.profile .main_profile .profile_details {
+    width: 40%;
 }
 
 .getStarted {
@@ -102,14 +176,14 @@ button:hover {
     outline: none;
     padding: 5px 15px;
     color: white;
-    background-color: rgb(136, 33, 33);
-    box-shadow: -1px -1px 42px 1px rgb(136, 33, 33);
+    background-color: rgb(41, 115, 226);
+    box-shadow: -1px -1px 42px 1px rgb(41, 115, 226);
 }
 
 .getStarted:hover {
-    color: rgb(136, 33, 33);
+    color: rgb(41, 115, 226);
     background-color: white;
-    box-shadow: -1px -1px 42px 1px rgb(136, 33, 33);
+    box-shadow: -1px -1px 42px 1px rgb(41, 115, 226);
 }
 
 .sub {
@@ -141,19 +215,23 @@ form {
 }
 
 form h1 {
-    color: rgb(136, 33, 33);
+    color: rgb(41, 115, 226);
     margin: 25px;
+    text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+    font-size: 48px;
+    text-align: center;
 }
 
 .inputDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 110px;
+    margin: 10px 80px;
 }
 
 .inputDiv input {
     padding: 10px;
+    margin: 10px;
 }
 
 .hire_table {
@@ -175,14 +253,11 @@ form h1 {
     padding: 12px;
 }
 
- 
- 
-
 .freelancers th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: rgb(136, 33, 33);
+    background-color: rgb(41, 115, 226);
     color: white;
 }
 
@@ -199,7 +274,7 @@ li {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 15px;
-    color: rgb(136, 33, 33);
+    color: rgb(41, 115, 226);
     font-family: 'Arial Narrow Bold', sans-serif;
     box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
 }
@@ -223,9 +298,133 @@ textarea {
 
 .zindeximg {
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.4;
     position: fixed;
     top: 0;
     min-width: 100%;
     min-height: 100%;
+}
+
+.username {
+    font-size: 44px;
+    color: rgb(16, 189, 25);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width: 1080px) {
+    header {
+        flex-direction: column;
+        padding: 0px;
+    }
+}
+
+.careProfile {
+    display: flex;
+}
+
+.contactUs {
+    display: flex;
+}
+
+.contactUs div {
+    width: 30%;
+    margin: 3%;
+    border: 2px solid blue;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.contactUs div h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: rgb(28, 88, 218);
+}
+
+.f5 {
+    font-size: 60px;
+    margin-bottom: 18px;
+}
+
+.f2 {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.f3 {
+    padding: 0px 25%;
+    text-align: center;
+    font-size: 23px;
+}
+
+.main_contact {
+    height: 70vh;
+    margin-top: 10px;
+}
+
+.sentMail {
+    margin-top: 90px;
+    float: right;
+}
+
+.main_about {
+    height: 60vh;
+    padding: 30px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    color: rgb(41, 115, 226);
+    font-family: 'Arial Narrow Bold', sans-serif;
+    box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+    text-align: center;
+}
+
+.main_about h1 {
+    font-size: 60px;
+}
+
+.main_about h3 {
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+}
+
+.main_orders {
+    padding: 30px;
+    margin: 5%;
+    border-radius: 15px;
+    color: rgb(41, 115, 226);
+    font-family: 'Arial Narrow Bold', sans-serif;
+    box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+    text-align: center;
+}
+
+.main_services_div {
+    margin: 0 5%;
+    padding: 2%;
+    box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
+    color: rgb(41, 115, 226);
+}
+
+.main_services {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main_services div {
+    padding: 50px;
+    min-height: 40vh;
+    min-width: 25vw;
+    border-radius: 15px;
+    border: 1px solid rgb(41, 115, 226);
+    margin: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main_services div p {
+    font-size: 24px;
+    font-weight: normal;
 }

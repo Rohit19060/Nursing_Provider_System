@@ -3,25 +3,37 @@ include_once("./includes/function.php");
 require_once("./includes/db.php");
 include_once("./includes/header.php");
 echo message();
-echo username();
 ?>
-<img src="./images/2.png" alt=".." class="zindeximg" width="60%">
+<img src="./images/1.png" alt=".." class="zindeximg" width="60%">
+
 <div class="main_div">
-    <h1 class="text-center title">Welcome</h1>
+    <h1 class="text-center title f5">Welcome <?php echo username(); ?></h1>
     <h3 class="text-center sub">
         Online Nursing portal is a website that user can search for home personal nursing. User have to register before
         hire nurse, user also can check the nurse personal profile detail. We are provide type of home service example:
         private nurse, mobility emergency transportation, wound management and healthy knowledge. All of the nurse
         engage in this field are carry professional and experience much like hospitals do.
     </h3>
-
     <div class="sub_buttons">
-        <a href="getHired.php" class="getStarted text-center">
-            Earn Money Freelancing
-        </a>
-        <a href="hire.php" class="getStarted text-center">
-            Hire a Freelancer
-        </a>
+        <?php
+        if (isset($_SESSION["h_id"]) || isset($_SESSION["m_id"])) {
+            if (isset($_SESSION["m_id"])) {
+                echo ' <a href="hire.php" class="getStarted text-center">
+                Hire a Care Giver
+            </a>';
+            } else {
+                echo '<a href="getHired.php" class="getStarted text-center">
+                Be a Care Giver
+            </a>';
+            }
+        } else { ?>
+            <a href="getHired.php" class="getStarted text-center">
+                Be a Care Giver
+            </a>
+            <a href="hire.php" class="getStarted text-center">
+                Hire a Care Giver
+            </a>
+        <?php } ?>
     </div>
 </div>
 <div class="main_div">
@@ -47,7 +59,6 @@ echo username();
 </div>
 
 <div class="packages">
-
     <div>
         <h1 class="text-center title">Package</h1>
         <h3>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Nursing Provider System</title>
+    <title>Nursing Care</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <style>
         body {
@@ -21,9 +21,9 @@
     ?>
     <form method="post" class="RegistrationForm" action="login_logic.php">
         <h2 class="mb-3 mt-3">
-            <a href="index.php">Nursing Provider System</a>
+            <a href="index.php">Nursing Care</a>
         </h2>
-        <h1 class="mb-3 mt-3 col_theme">Log In</h1>
+        <h1 class="mb-3 mt-3 col_theme">Sign In</h1>
         <?php echo message(); ?>
         <div class="inputDiv">
             <label for="email">Email</label>
@@ -35,13 +35,13 @@
         </div>
         <div>As
             <input type="radio" name="type" id="freelancer" value="freelancer" required />
-            <label for="freelancer">Freelancer</label>
-            <input type="radio" name="type" id="management" value="management" required />
-            <label for="management">Management</label>
+            <label for="freelancer">Care Giver</label>
+            <input type="radio" name="type" id="client" value="client" required />
+            <label for="client">Client</label>
         </div>
         <div class="text-center mb-3 mt-3">
             <a href="register.php" class="col_theme">
-                Register Instead
+                Sign Up Instead
             </a>
         </div>
         <div class="text-center mb-2">

@@ -1,7 +1,7 @@
 <?php
 include_once("./includes/function.php");
 if (!isset($_SESSION["m_id"])) {
-    $_SESSION["message"] = "You need to login first";
+    $_SESSION["message"] = "You need to Sign In first";
     redirect("login.php");
 }
 
@@ -9,7 +9,7 @@ include_once("./includes/header.php");
 echo message();
 require_once("./includes/db.php");
 $m_id = $_SESSION["m_id"];
-$q = "SELECT * FROM management where m_id = '$m_id'";
+$q = "SELECT * FROM Client where m_id = '$m_id'";
 $result = mysqli_query($connection, $q);
 $num = mysqli_num_rows($result);
 if ($num) {

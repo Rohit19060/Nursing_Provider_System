@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Nursing Provider System</title>
+    <title>Nursing Care</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <style>
         body {
@@ -15,15 +15,15 @@
     <?php
     include_once("./includes/function.php");
     if (isset($_SESSION["h_id"]) || isset($_SESSION["m_id"])) {
-        $_SESSION["message"] = "Your can't go back to login page";
+        $_SESSION["message"] = "Your can't go back to Sign In page";
         redirect();
     }
     ?>
     <form method="POST" class="RegistrationForm" action="register_logic.php">
         <h2 class="mb-3 mt-3">
-            <a href="index.php">Nursing Provider System</a>
+            <a href="index.php">Nursing Care</a>
         </h2>
-        <h1 class=" mt-3 col_theme">Register</h1>
+        <h1 class=" mt-3 col_theme">Sign Up</h1>
         <?php echo message(); ?>
         <div class="inputDiv">
             <label for="username">Name</label>
@@ -32,6 +32,18 @@
         <div class="inputDiv">
             <label for="email">Email</label>
             <input type="email" name="email" required />
+        </div>
+        <div class="inputDiv">
+            <label for="Dob">Dob</label>
+            <input type="date" name="dob" required />
+        </div>
+        <div class="inputDiv">
+            <label for="address">Address</label>
+            <input type="text" name="address" required />
+        </div>
+        <div class="inputDiv">
+            <label for="phone">Phone</label>
+            <input type="number" name="phone" required minlength="10" maxlength="11" />
         </div>
         <div class="inputDiv">
             <label for="password1">Password</label>
@@ -43,13 +55,13 @@
         </div>
         <div>As
             <input type="radio" name="type" id="freelancer" value="freelancer" required />
-            <label for="freelancer">Freelancer</label>
-            <input type="radio" name="type" id="management" value="management" required />
-            <label for="management">Management</label>
+            <label for="freelancer">Care Giver</label>
+            <input type="radio" name="type" id="client" value="client" required />
+            <label for="client">Client</label>
         </div>
         <div class="text-center mb-3 mt-3">
             <a href="login.php" class="col_theme">
-                Log In Instead
+                Sign In Instead
             </a>
         </div>
         <div class="text-center mb-2">

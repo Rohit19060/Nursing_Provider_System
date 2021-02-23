@@ -1,7 +1,7 @@
 <?php
 include_once("./includes/function.php");
 if (!isset($_SESSION["m_id"])) {
-    $_SESSION["message"] = "You need to login first";
+    $_SESSION["message"] = "You need to Sign In first";
     redirect("login.php");
 }
 
@@ -10,7 +10,7 @@ echo message();
 require_once("./includes/db.php");
 ?>
 <div class="text-center search">
-    <h2 class='mb-2 mt-3'>Search Freelancers</h2>
+    <h2 class='mb-2 mt-3'>Search Care Giver</h2>
     <input type="search" id="search" placeholder="Search by Name" onkeyup="load(this.value)" class="form-control">
     <div id="output" class="mt-3 mb-2"></div>
 </div>
@@ -42,35 +42,49 @@ if ($num) {
 ?>
     <img src="./images/2.png" alt=".." class="zindeximg" width="60%">
     <div class="mt-3">&nbsp;</div>
-    <h2 class="text-center mb-3">Freelancers</h2>
+    <h2 class="text-center mb-3">Care Givers</h2>
     <div class="hire_table">
-        <table class='freelancers'>
+        <table class='freelancers '>
             <tr>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Hire</th>
+                <th>Status</th>
+                <th>Hired Upto Date</th>
+                
             </tr>
         <?php
         while ($user = mysqli_fetch_assoc($result)) {
+            $status = "Available";
+            $upto = "";
+            $order_id = $user["order_id"];
+            $query = "SELECT * FROM `orders` WHERE `Order_id`='$order_id'";
+            $res = mysqli_query($connection, $query);
+            if (mysqli_num_rows($res)) {
+                $data = mysqli_fetch_assoc($res);
+                $upto = $data["date_upto"];
+                $date = new DateTime($upto);
+                $now = new DateTime();
+                if ($date < $now) {
+                    $status == "Available";
+                } else {
+                    $status = "Not Available";
+                }
+            }
             echo "<tr>";
-            echo "<td>" . $user["name"] . "</td>";
+            echo "<td><a href='freelancerhireProfile.php?id=" . $user["h_id"] . "' style='all:unset;cursor: pointer;'>" . $user["name"] . "</a></td>";
             echo "<td>" . $user["email"] . "</td>";
-            if ($user["hired"] == 0) {
-                echo "<td><a href='hireFreelancer.php?id=" . $user["h_id"] . "'> Hire Me! </a> </td>";
+            if ($status == "Available") {
+                echo "<td><a href='hireFreelancer.php?id=" . $user["h_id"] . "' style='padding:6px;'> Hire Me! </a></td>";
             } else {
                 echo "<td>Already Hired</td>";
+                echo "<td>" . $upto . "</td>";
             }
-
+           
             echo "</tr>";
         }
     }
         ?>
         </table>
     </div>
-
-
-
-
-
 
     <?php include_once("includes/footer.php"); ?>

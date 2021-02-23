@@ -4,7 +4,7 @@ if (isset($_SESSION["h_id"]) || isset($_SESSION["m_id"])) {
     foreach ($_SESSION as $key => $value) {
         $_SESSION[$key] = null;
     }
-    $_SESSION["message"] = "Logged Out Successfully";
+    $_SESSION["message"] = "Signed Out Successfully";
     redirect("index.php");
 } else {
     // Logged out
