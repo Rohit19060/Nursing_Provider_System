@@ -40,5 +40,4 @@ if (isset($_POST['submit']) && isset($_SESSION["h_id"]) || isset($_SESSION["m_id
     $_SESSION["message"] = "You need to Sign In to access this page";
     redirect("login.php");
 }
-
 echo $_SESSION["message"];

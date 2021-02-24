@@ -25,7 +25,6 @@ if (isset($_POST["submit"])) {
         $Profiledestination = "images/$ProfileNewName";
         move_uploaded_file($ProfiletmpName, $Profiledestination);
     }
-
     $IC = $_FILES["ic"];
     $ICName = $IC['name'];
     $ICtmpName = $IC['tmp_name'];

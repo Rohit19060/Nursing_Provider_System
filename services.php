@@ -3,11 +3,8 @@ include_once("./includes/function.php");
 include_once("./includes/Header.php");
 ?>
 <img src="./images/2.png" alt=".." class="zindeximg" width="60%">
-
 <div class="main_services_div">
-
     <h1 class="text-center mt-3 f2">Why Choose Us</h1>
-
     <section class="main_services">
         <div>
             <h2>Private Nurses</h2>
@@ -34,7 +31,6 @@ include_once("./includes/Header.php");
                 There are many different types of medical transportation services – from emergency ambulatory transportation to non-emergency medical transportation. Knowing the right type of transportation for your needs and mobility may help you save money while ensuring you get to your intended destination safely, comfortably, and on time.
             </p>
         </div>
-
         <div>
             <h2>Bended and Qualified Caregivers</h2><br>
             <p>
@@ -43,6 +39,5 @@ include_once("./includes/Header.php");
         </div>
     </section>
 </div>
-
 <?php
 include_once("./includes/footer.php");

@@ -10,6 +10,7 @@ function message()
         return $output;
     }
 }
+
 function message2()
 {
     if (isset($_SESSION["message2"])) {

@@ -4,7 +4,6 @@ if (!isset($_SESSION["h_id"])) {
     $_SESSION["message"] = "You need to login first";
     redirect("login.php");
 }
-
 include_once("./includes/header.php");
 echo message();
 require_once("./includes/db.php");
@@ -14,7 +13,6 @@ $result = mysqli_query($connection, $q);
 $num = mysqli_num_rows($result);
 if ($num) {
     $user = mysqli_fetch_assoc($result);
-
     if ($user["hired"] != 0) {
         $hirer_id = $user["hired"];
         $status = "Available";
@@ -43,17 +41,11 @@ if ($num) {
         }
     }
     $age = date_diff(date_create($user["dob"]), date_create('today'))->y;
-
-?>
-    <?php echo message2(); ?>
+    echo message2(); ?>
     <img src="./images/2.png" alt=".." class="zindeximg" width="60%">
 <?php
 }
-?>
-
-
-
-<?php if ($user["profile"] == null) {
+if ($user["profile"] == null) {
 ?><div class="text-center"><img src="./images/profile.png" alt=".." width="150px"></div>
     <form action="updateProfile.php" method="post" style="min-width:40%" enctype="multipart/form-data">
         <h1 class="mb-3 mt-3 col_theme">Your Professional Details</h1>
@@ -70,7 +62,6 @@ if ($num) {
             <label for="certificate">Certificate</label>
             <input type="file" name="certificate" required />
         </div>
-
         <div class="text-center mb-2">
             <input type="submit" value="Submit" name="submit" />
         </div>
@@ -81,8 +72,6 @@ if ($num) {
     <div class="text-center"><img src="./images/<?php echo $user["profile"]; ?>" alt=".." width="150px"></div>
 <?php
 }
-
-
 $q = "SELECT * FROM services where id = '$h_id'";
 $result = mysqli_query($connection, $q);
 if (mysqli_num_rows($result)) {
@@ -121,17 +110,13 @@ if (mysqli_num_rows($result)) {
                                                             } ?>>
             <label for="BAQ">Bended and Qualified Caregivers</label><br>
         </div>
-
         <div class="text-center mb-2">
             <input type="submit" value="Submit" name="submit" />
         </div>
     </form>
-
 <?php
 } else {
 ?>
-
-
     <form action="AddServices.php" method="post">
         <h1 class="mb-3 mt-3 col_theme">Choose Your Services</h1>
         <?php echo message(); ?>
@@ -155,16 +140,12 @@ if (mysqli_num_rows($result)) {
             <input type="checkbox" name="BAQ" value="BAQ">
             <label for="BAQ">Bended and Qualified Caregivers</label><br>
         </div>
-
         <div class="text-center mb-2">
             <input type="submit" value="Submit" name="submit" />
         </div>
     </form>
 <?php
 }
-
-
-
 $q = "SELECT * FROM orders where h_id =  '$h_id'";
 $result = mysqli_query($connection, $q);
 $num = mysqli_num_rows($result);
@@ -186,23 +167,11 @@ if ($num) {
             </tr>";
         while ($user_orders = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            $current = "";
-            if ($user["order_id"] == $user_orders["Order_id"]) {
-                $upto = $user_orders["date_upto"];
-                $date = new DateTime($upto);
-                $now = new DateTime();
-                if ($date < $now) {
-                    $current = "";
-                } else {
-                    $current = "=> ";
-                }
-            }
-            echo "<td>" . $current . $Sno++ .  " </td>";
+            echo "<td>" . $Sno++ .  " </td>";
             echo "<td>" . $user_orders["date_hired"] . "</td>";
             echo "<td>" . $user_orders["date_upto"] . "</td>";
             echo "<td>" . $user_orders["amount"] . " RM</td>";
             $m_id = $user_orders['m_id'];
-
             $q_client = "SELECT * FROM client WHERE `m_id`='$m_id'";
             $result_manage = mysqli_query($connection, $q_client);
             $num_manage = mysqli_num_rows($result_manage);
@@ -210,25 +179,11 @@ if ($num) {
                 $manager = mysqli_fetch_assoc($result_manage);
                 echo "<td>" .  ucwords($manager["name"]) . "</td>";
             }
-
             echo "</tr>";
         }
-
         echo "</table>";
-
         ?>
     </div>
 <?php
 }
-
-
-
-?>
-
-
-
-
-
-
-
-<?php include_once("includes/footer.php"); ?>
+include_once("includes/footer.php"); ?>

@@ -47,7 +47,6 @@
                 <label for="CVV">CVV</label>
                 <input type="password" name="CVV" required maxlength="3" />
             </div>
-
             <div class="text-center mb-2">
                 <input type="submit" value="Submit" name="submit" />
             </div>

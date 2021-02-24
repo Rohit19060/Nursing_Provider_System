@@ -11,12 +11,9 @@ if (isset($_POST['submit']) && isset($_SESSION["h_id"]) || isset($_SESSION["m_id
         $q = "SELECT * FROM `freelancer` where h_id = $h_id";
         $query_delete = "DELETE FROM `freelancer` WHERE h_id = $h_id";
     }
-
     $cur_password = mysqli_preparation($_POST["password"]);
-
     $result = mysqli_query($connection, $q);
     $user = mysqli_fetch_assoc($result);
-
     if ($cur_password == $user["password"]) {
         if (mysqli_query($connection, $query_delete)) {
             $_SESSION["message"] = "Data Deleted Successfully";
@@ -33,4 +30,3 @@ if (isset($_POST['submit']) && isset($_SESSION["h_id"]) || isset($_SESSION["m_id
     $_SESSION["message"] = "You need to Sign In to access this page";
     redirect("login.php");
 }
-echo message();

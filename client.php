@@ -4,7 +4,6 @@ if (!isset($_SESSION["m_id"])) {
     $_SESSION["message"] = "You need to Sign In first";
     redirect("login.php");
 }
-
 include_once("./includes/header.php");
 echo message();
 require_once("./includes/db.php");
@@ -46,10 +45,6 @@ if ($num) {
 <?php
 }
 ?>
-
-
-
-
 <form action="delete.php?table=2" method="post">
     <h1>Delete</h1>
     <div class="inputDiv">
@@ -60,5 +55,4 @@ if ($num) {
         <input type="submit" value="Submit" name="submit" />
     </div>
 </form>
-
 <?php include_once("includes/footer.php"); ?>

@@ -4,7 +4,6 @@ if (!isset($_SESSION["m_id"])) {
     $_SESSION["message"] = "You need to Sign In first";
     redirect("login.php");
 }
-
 include_once("./includes/header.php");
 echo message();
 require_once("./includes/db.php");
@@ -31,11 +30,7 @@ require_once("./includes/db.php");
     }
 </script>
 <?php
-
-
-
 $q = "SELECT * FROM freelancer";
-
 $result = mysqli_query($connection, $q);
 $num = mysqli_num_rows($result);
 if ($num) {
@@ -50,7 +45,6 @@ if ($num) {
                 <th>Email</th>
                 <th>Status</th>
                 <th>Hired Upto Date</th>
-                
             </tr>
         <?php
         while ($user = mysqli_fetch_assoc($result)) {
@@ -79,12 +73,10 @@ if ($num) {
                 echo "<td>Already Hired</td>";
                 echo "<td>" . $upto . "</td>";
             }
-           
             echo "</tr>";
         }
     }
         ?>
         </table>
     </div>
-
     <?php include_once("includes/footer.php"); ?>

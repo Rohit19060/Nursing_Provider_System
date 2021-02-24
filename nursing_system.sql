@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2021 at 09:59 PM
+-- Generation Time: Feb 24, 2021 at 05:05 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -34,16 +34,6 @@ CREATE TABLE `client` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `client`
---
-
-INSERT INTO `client` (`m_id`, `name`, `email`, `password`) VALUES
-(7, 'management', 'management@gmail.com', '123'),
-(8, 'management', 'admin@gmail.com', '123'),
-(9, 'rohit19060', 'thepinkcomrade@gmail.com', '123'),
-(10, 'maddy', 'maddy@gmail.com', '123456');
-
 -- --------------------------------------------------------
 
 --
@@ -67,14 +57,6 @@ CREATE TABLE `freelancer` (
   `order_id` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `freelancer`
---
-
-INSERT INTO `freelancer` (`h_id`, `name`, `email`, `password`, `hired`, `dob`, `phone`, `address`, `rate`, `bio`, `profile`, `ic`, `certificate`, `order_id`) VALUES
-(41, 'Maddy', 'asdf@gmail.com', '123', 7, '2019-01-10', 2147483647, 'asdf', 15, 'Hi, Myself Rohit', '41profileGaming.png', '41icGaming.pdf', '41certificateGaming.pdf', 16),
-(43, 'rohit', 'jain@gmail.com', '123', 7, '1998-03-20', 2147483647, 'rtadsfasdf', 15, 'TEst BIo', '43profileKing_Tech_Profile_Light.png', '43icGaming.pdf', '43certificateGaming.pdf', 15);
-
 -- --------------------------------------------------------
 
 --
@@ -90,15 +72,6 @@ CREATE TABLE `orders` (
   `m_id` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`Order_id`, `h_id`, `date_hired`, `date_upto`, `amount`, `m_id`) VALUES
-(14, 43, '2021-02-23', '2021-02-24', 1392, 7),
-(15, 43, '2021-02-23', '2021-02-24', 1392, 7),
-(16, 41, '2021-02-23', '2021-02-25', 240, 7);
-
 -- --------------------------------------------------------
 
 --
@@ -113,14 +86,6 @@ CREATE TABLE `services` (
   `MET` tinyint(1) DEFAULT NULL,
   `BAQ` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `services`
---
-
-INSERT INTO `services` (`id`, `PN`, `HP`, `WM`, `MET`, `BAQ`) VALUES
-(41, 0, 1, 1, 1, 0),
-(43, 0, 1, 1, 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -161,19 +126,19 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
-  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `freelancer`
 --
 ALTER TABLE `freelancer`
-  MODIFY `h_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `h_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `Order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `Order_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

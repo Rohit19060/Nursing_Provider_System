@@ -36,6 +36,8 @@ include_once("./includes/Header.php");
         <div>
             <h1>Make An Appointment</h1>
             <h3>Contact us to find out more about our Facilities and Services that our nurses are providing. Our Nurses are always ready to help whenever you need with care and Love.</h3>
+            <h3>&nbsp;</h3>
+            <h3>&nbsp;</h3>
             <a href="mailto:appoint@nc.com"><button class="sentMail">Send Mail</button></a>
         </div>
         <div>
@@ -48,6 +50,5 @@ include_once("./includes/Header.php");
         </div>
     </section>
 </div>
-
 <?php
 include_once("./includes/footer.php");

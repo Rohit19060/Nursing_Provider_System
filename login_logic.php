@@ -1,6 +1,5 @@
 <?php
 include_once("./includes/function.php");
-
 if (isset($_POST["submit"])) {
     require_once("includes/db.php");
     $type = $_POST["type"];

@@ -9,7 +9,6 @@ require_once("./includes/db.php");
 $h_id = $_SESSION["h_id"];
 $new_bio = $_POST["bio"];
 $query_update = "UPDATE `freelancer` SET `bio`='$new_bio' WHERE `h_id` = $h_id";
-
 $result = mysqli_query($connection, $query_update);
 if ($result) {
     $_SESSION["message"] = "Bio Updated Successfully";

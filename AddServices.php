@@ -6,7 +6,6 @@ if (!isset($_SESSION["h_id"])) {
 }
 echo message();
 require_once("./includes/db.php");
-
 $h_id = $_SESSION["h_id"];
 $q = "SELECT * FROM services where id = '$h_id'";
 $result = mysqli_query($connection, $q);

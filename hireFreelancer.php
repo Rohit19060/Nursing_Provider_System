@@ -10,7 +10,6 @@
     <?php
     include_once("./includes/function.php");
     include_once("./includes/db.php");
-
     if (!isset($_SESSION["m_id"])) {
         $_SESSION["message"] = "You can't access this page";
         redirect("hire.php");
@@ -22,7 +21,6 @@
         $id = mysqli_preparation($h_id);
         $rate = mysqli_preparation($_POST["rate"]);
         $today = mysqli_preparation(date('Y-m-d'));
-
         $query = "INSERT INTO `orders`(`h_id`, `date_hired`, `date_upto`, `amount`,`m_id`) VALUES ('$id','$today','$upto','$rate','$m_id')";
         if ($result = mysqli_query($connection, $query)) {
             echo "<h2 class='inputDiv'>Hiring and Payment Successful</h2>";
@@ -47,14 +45,12 @@
             </div>
             <div class="inputDiv">
                 <?php
-
                 $q = "SELECT * FROM freelancer where h_id = '$h_id'";
                 $result = mysqli_query($connection, $q);
                 $num = mysqli_num_rows($result);
                 if ($num) {
                     $user = mysqli_fetch_assoc($result);
                 }
-
                 ?>
                 <label for="exp">Price <?php echo $user["rate"]; ?> RM/hour</label>
                 <input type="text" name="rate" id="rate" required readonly />RM

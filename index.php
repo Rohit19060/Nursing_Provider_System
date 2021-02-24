@@ -5,7 +5,6 @@ include_once("./includes/header.php");
 echo message();
 ?>
 <img src="./images/1.png" alt=".." class="zindeximg" width="60%">
-
 <div class="main_div">
     <h1 class="text-center title f5">Welcome <?php echo username(); ?></h1>
     <h3 class="text-center sub">
@@ -14,6 +13,8 @@ echo message();
         private nurse, mobility emergency transportation, wound management and healthy knowledge. All of the nurse
         engage in this field are carry professional and experience much like hospitals do.
     </h3>
+    <br>
+    <br>
     <div class="sub_buttons">
         <?php
         if (isset($_SESSION["h_id"]) || isset($_SESSION["m_id"])) {
@@ -35,6 +36,38 @@ echo message();
             </a>
         <?php } ?>
     </div>
+    <br>
+    <br>
+    <div class="slideshow-container">
+        <?php
+        $query_slider = "SELECT * FROM `freelancer`";
+        $result = mysqli_query($connection, $query_slider);
+        $num = mysqli_num_rows($result);
+        if ($num) {
+            while ($x_slider = mysqli_fetch_assoc($result)) {
+                echo '<div class="mySlides fade"><div>';
+                if ($x_slider["profile"] == null) {
+                    echo '<img src="images/profile.png" alt="profile" width="150px">';
+                } else {
+                    echo '<img src="images/' . $x_slider["profile"] . '" alt="profile" width="150px">';
+                }
+                echo '</div>';
+                echo  '<div class="f2">' .  ucwords($x_slider["name"]) . '</div>';
+                echo '<div  >Rate: ' . $x_slider["rate"] . 'RM/Hour</div>';
+                echo '</div>';
+            }
+        }
+        ?>
+    </div>
+    <div style="text-align:center">
+        <?php
+        for ($i = 0; $i < $num; $i++) {
+            echo '<span class="dot"></span>';
+        }
+        ?>
+    </div>
+    <br>
+    <br>
 </div>
 <div class="main_div">
     <h1 class="text-center title">Why Choose Us</h1>
@@ -57,7 +90,6 @@ echo message();
         </li>
     </ul>
 </div>
-
 <div class="packages">
     <div>
         <h1 class="text-center title">Package</h1>
@@ -79,8 +111,6 @@ echo message();
             <li>Communication and companionship</li>
             <li>Escorting to hospital/clinic for doctor's appointment</li>
         </ul>
-
-
         <ul>
             <h3>Additional Medical Services</h3>
             <li>Feeding tube insertion</li>
@@ -101,7 +131,6 @@ echo message();
         </ul>
     </div>
 </div>
-
 <div class="packages">
     <h1 class="text-center title">Feedback</h1>
     <h2>Tell us what you think... it helps us get even better!</h2>
@@ -109,12 +138,8 @@ echo message();
         <li>Name, Email, Phone Number and Gender.</li>
         <li>How satisfied are you in general with the HELP CARE services? </li>
         <li>How would you assess the overall quality of our service?*</li>
-        <li>
-            • If you had a friend or neighbor needing care would you recommend our agency to them?*
-        </li>
-        <li>
-            Have you any additional comments and suggestions on how we might improve our service to you? Please write them in this box.
-        </li>
+        <li>If you had a friend or neighbor needing care would you recommend our agency to them?</li>
+        <li>Have you any additional comments and suggestions on how we might improve our service to you? Please write them in this box.</li>
     </ul>
     <form action="feedback.php" method="post">
         <textarea name="feedback" id="feedback" rows="10" cols="100" class="mt-3 mb-2"></textarea>
@@ -123,4 +148,27 @@ echo message();
         </div>
     </form>
 </div>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "flex";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000);
+    }
+</script>
 <?php include_once("./includes/footer.php");

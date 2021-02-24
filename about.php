@@ -14,8 +14,5 @@ include_once("./includes/Header.php");
         "Providing quality and compassionate nursing care"</br>
         Creating positive work environments that foster and support professional growth and development. Establishing the standards for nursing practice.</h3>
 </div>
-
-
-
 <?php
 include_once("./includes/footer.php");

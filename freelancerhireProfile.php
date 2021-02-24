@@ -18,9 +18,7 @@ if ($num) {
         $available = "Not Available";
     }
     $age = date_diff(date_create($user["dob"]), date_create('today'))->y;
-
-?>
-    <?php echo message2(); ?>
+    echo message2(); ?>
     <img src="./images/2.png" alt=".." class="zindeximg" width="60%">
     <div class="profile">
         <div class="myProfile text-center">
@@ -99,16 +97,13 @@ if ($num) {
                     <span>Phone</span>
                     <span><?php echo $user["phone"]; ?></span>
                 </div>
-
                 <?php if ($user["rate"] != 0) {
                     echo '<div>
                     <span>Rate</span>
                     <span>' . $user["rate"] . ' RM/Hour</span>
                 </div>';
                 } ?>
-
             </div>
-
         </div>
         <div class="text-center">
             <?php
@@ -118,7 +113,6 @@ if ($num) {
         </div>
         <?php
         $q = "SELECT * FROM freelancer where `h_id` = '$h_id'";
-
         $result = mysqli_query($connection, $q);
         $num = mysqli_num_rows($result);
         if ($num) {
@@ -140,10 +134,7 @@ if ($num) {
                 }
             }
         }
-        ?>
-
-
-        <?php if ($status == "Available") {
+        if ($status == "Available") {
             echo "<a href='hireFreelancer.php?id=" . $user["h_id"] . "' class='text-center'><button> Hire Me! </button></a> ";
         } else {
             echo "<h2 class='text-center mt-3'>Already Hired</h2>";
