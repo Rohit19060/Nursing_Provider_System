@@ -356,8 +356,16 @@ textarea {
 }
 
 .main_contact {
-    height: 70vh;
-    margin-top: 10px;
+    padding: 30px;
+    margin: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    color: rgb(41, 115, 226);
+    font-family: 'Arial Narrow Bold', sans-serif;
+    box-shadow: -1px -1px 12px 5px rgba(232, 232, 232, 1);
 }
 
 .sentMail {

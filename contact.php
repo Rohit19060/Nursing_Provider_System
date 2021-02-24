@@ -3,7 +3,7 @@ include_once("./includes/function.php");
 include_once("./includes/Header.php");
 ?>
 <img src="./images/2.png" alt=".." class="zindeximg" width="60%">
-<div class="main_div main_contact">
+<div class="main_contact">
     <h1 class="text-center mt-3 f5">Contact Us</h1>
     <h2 class="f2"> Contact Is Perhaps The Most Powerful Sense Of All </h2>
     <p class="f3">
@@ -15,7 +15,7 @@ include_once("./includes/Header.php");
             <h3 style="font-weight:bold;">Infrastructure University Kuala Lumpur (IUKL)</h3>
             <h3>Unipark Suria, Jalan Ikram-Uniten, 43000 Kajang, Selangor</h3>
             <h4>Hours:</h4>
-            <h4>Closed ⋅ Opens 9AM Wed</h4>
+            <h4>Closed ⋅ Opens 9AM</h4>
             <a href="tel:+60 13-640 5454">
                 <h2>+60 13-640 5454</h2>
             </a>
