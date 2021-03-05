@@ -70,7 +70,12 @@ if ($num) {
             if ($status == "Available") {
                 echo "<td><a href='hireFreelancer.php?id=" . $user["h_id"] . "' style='padding:6px;'> Hire Me! </a></td>";
             } else {
-                echo "<td>Already Hired</td>";
+
+                if ($user["hired"] == $_SESSION["m_id"]) {
+                    echo "<td><a href='cancelHire.php?id=" . $user["h_id"] . "' style='padding:6px;'> Cancel </a></td>";
+                } else {
+                    echo "<td>Already Hired</td>";
+                }
                 echo "<td>" . $upto . "</td>";
             }
             echo "</tr>";
