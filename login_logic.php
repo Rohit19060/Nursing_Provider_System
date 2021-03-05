@@ -20,11 +20,11 @@ if (isset($_POST["submit"])) {
             $_SESSION["message"] = "Signed In Successfully";
             redirect("index.php");
         } else {
-            $_SESSION["message"] = "Credentials not right try again";
+            $_SESSION["message"] = "Wrong Username/Password not right try again";
             redirect("login.php");
         }
     } else {
-        $_SESSION["message"] = "Credentials not right try again";
+        $_SESSION["message"] = "Wrong Username/Password not right try again";
         redirect("login.php");
     }
 } else {

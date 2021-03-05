@@ -3,9 +3,9 @@ session_start();
 function message()
 {
     if (isset($_SESSION["message"])) {
-        $output = "<h2 class='mb-3 mt-3 error-message text-center'>";
+        $output = "<h3 class='mb-3 mt-3 error-message text-center'>";
         $output .= htmlentities($_SESSION["message"]);
-        $output .= "</h2>";
+        $output .= "</h3>";
         $_SESSION["message"] = null;
         return $output;
     }

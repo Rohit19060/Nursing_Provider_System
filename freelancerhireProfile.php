@@ -29,7 +29,7 @@ if ($num) {
             <div class="dummy"></div>
             <div class="profile_image">
                 <?php if ($user["profile"] == null) {
-                    echo '<img src="images/profile.png" alt="profile" width="80%">';
+                    echo '<img src="images/lim.jpeg" alt="profile" width="80%">';
                 } else {
                     echo '<img src="images/' . $user["profile"] . '" alt="profile" width="80%">';
                 } ?>
