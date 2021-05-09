@@ -30,8 +30,6 @@
 </a>
 </p>
 
-<p align="center" title="Nursing Provider System gif"><img src="./assets/images/main.gif" alt="Nursing Provider System gif" /></p>
-
 <h2 align="center">🌐 Links 🌐</h2>
 <p align="center">
     <a href="https://github.com/Rohit19060/Nursing-Provider-System" target="_blank" title="Nursing Provider System Repo">📂 Repo</a>
