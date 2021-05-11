@@ -1,40 +1,40 @@
 <p align="center">
-  <a href="https://github.com/Rohit19060/Nursing-Provider-System" target="_blank" title="Nursing Provider System">
-    <img src="https://kingtechnologies.in/assets/images/logo.png" width="80px" alt="Nursing Provider System" />
+  <a href="https://github.com/Rohit19060/Nursing-Provider-System" title="Nursing Provider System">
+    <img src="https://kingtechnologies.in/assets/images/logo.png" width="80px" alt="Nursing Provider System"/>
   </a>
 </p>
 <h1 align="center">🌟 Nursing Provider System 🌟</h1>
 <p align="center">PHP Application for Freelance Nurse. Here you can register and hire someone or get hired by someone.</p>
 
 <p align="center">
-<a href="https://github.com/Rohit19060/Nursing-Provider-System/blob/master/LICENSE" target="_blank" title="License">
-<img src="https://img.shields.io/github/license/Rohit19060/Nursing-Provider-System?label=License&logo=Github&style=flat-square" alt="Nursing Provider System License" />
+<a href="https://github.com/Rohit19060/Nursing-Provider-System/blob/master/LICENSE" title="License">
+<img src="https://img.shields.io/github/license/Rohit19060/Nursing-Provider-System?label=License&logo=Github&style=flat-square" alt="Nursing Provider System License"/>
 </a>
-<a href="https://github.com/Rohit19060/Nursing-Provider-System/fork" target="_blank" title="Forks">
+<a href="https://github.com/Rohit19060/Nursing-Provider-System/fork" title="Forks">
 <img src="https://img.shields.io/github/forks/Rohit19060/Nursing-Provider-System?label=Forks&logo=Github&style=flat-square" alt="Nursing Provider System Forks"/>
 </a>
-<a href="https://github.com/Rohit19060/Nursing-Provider-System/stargazers" target="_blank" title="Stars">
+<a href="https://github.com/Rohit19060/Nursing-Provider-System/stargazers" title="Stars">
 <img src="https://img.shields.io/github/stars/Rohit19060/Nursing-Provider-System?label=Stars&logo=Github&style=flat-square" alt="Nursing Provider System Stars"/>
 </a>
-<a href="https://github.com/Rohit19060/Nursing-Provider-System/issues" target="_blank" title="Issues">
+<a href="https://github.com/Rohit19060/Nursing-Provider-System/issues" title="Issues">
 <img src="https://img.shields.io/github/issues/Rohit19060/Nursing-Provider-System?label=Issues&logo=Github&style=flat-square" alt="Nursing Provider System Issues"/>
 </a>
-<a href="https://github.com/Rohit19060/Nursing-Provider-System/pulls" target="_blank" title="Pull Requests">
+<a href="https://github.com/Rohit19060/Nursing-Provider-System/pulls" title="Pull Requests">
 <img src="https://img.shields.io/github/issues-pr/Rohit19060/Nursing-Provider-System?label=Pull%20Requests&logo=Github&style=flat-square" alt="Nursing Provider System Pull Requests"/>
 </a>
-<a href="https://github.com/Rohit19060/Nursing-Provider-System" target="_blank" title="Repo Size">
+<a href="https://github.com/Rohit19060/Nursing-Provider-System" title="Repo Size">
 <img src="https://img.shields.io/github/repo-size/Rohit19060/Nursing-Provider-System?label=Repo%20Size&logo=Github&style=flat-square" alt="Nursing Provider System Repo Size"/>
 </a>
-<a href="https://discord.gg/2wpHNSjwm2" target="_blank" title="Join Community">
+<a href="https://discord.gg/2wpHNSjwm2" title="Join King Tech's Community">
 <img src="https://img.shields.io/discord/737854816402800690?color=%236d82cb&label=Join%20Community&logo=discord&logoColor=%23FFFFFF&style=flat-square" alt="Join discord community for Nursing Provider System"/>
 </a>
 </p>
 
 <h2 align="center">🌐 Links 🌐</h2>
 <p align="center">
-    <a href="https://github.com/Rohit19060/Nursing-Provider-System" target="_blank" title="Nursing Provider System Repo">📂 Repo</a>
+    <a href="https://github.com/Rohit19060/Nursing-Provider-System" title="Nursing Provider System Repo">📂 Repo</a>
     ·
-    <a href="https://github.com/Rohit19060/Nursing-Provider-System/issues/new/choose" target="_blank" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
+    <a href="https://github.com/Rohit19060/Nursing-Provider-System/issues/new/choose" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
 </p>
 
 ## 🚀 Features
@@ -107,7 +107,7 @@ You just need to use `Apache` and `MySQL` and the app will be ready to run on an
 
 **Rohit Jain**
 
-- 🌌 [Profile](https://github.com/rohit19060 "Rohit Jain")
+- 🌌 [Profile](https://github.com/Rohit19060 "Rohit Jain")
 
 - 🏮 [Email](mailto:rohitjain19060@gmail.com?subject=Hi%20from%20Nursing%20Provider%20System "Hi!")
 
@@ -115,14 +115,14 @@ You just need to use `Apache` and `MySQL` and the app will be ready to run on an
 
 <h2 align="center">🤝 Support</h2>
 
-<h3 align="center">🎀 Contributions (<a href="https://guides.github.com/introduction/flow" title="GitHub Flow">GitHub Flow</a>), 🔥 issues, and 🥮 feature requests are most welcome!</h3>
+<h3 align="center">🎀 Contributions (<a href="https://guides.github.com/introduction/flow" title="GitHub flow">GitHub Flow</a>), 🔥 issues, and 🥮 feature requests are most welcome!</h3>
 
 <h3 align="center">💙 If you like this project, Give it a ⭐ and Share it with friends!</h3>
 <h3 align="center">💰 Donations Links</h3>
 <p align="center">
-<a href="https://www.paypal.me/kingrohitJ" target="_blank" title="PayPal"><img src="https://kingtechnologies.in/assets/images/paypal.png" alt="PayPal"/>
-<a href="https://www.buymeacoffee.com/rohitjain" target="Buy me a Coffee/" title="Buy me a Coffee"><img src="https://kingtechnologies.in/assets/images/coffee.png" alt="Buy me a Coffee"/>
-<a href="https://ko-fi.com/rohitjain" target="_blank" title="Ko-fi"><img src="https://kingtechnologies.in/assets/images/kofi.png" alt="Ko-fi"/></a>
+<a href="https://www.paypal.me/kingrohitJ" title="PayPal"><img src="https://kingtechnologies.in/assets/images/paypal.png" alt="PayPal"/></a>
+<a href="https://www.buymeacoffee.com/rohitjain" title="Buy me a Coffee"><img src="https://kingtechnologies.in/assets/images/coffee.png" alt="Buy me a Coffee"/></a>
+<a href="https://ko-fi.com/rohitjain" title="Ko-fi"><img src="https://kingtechnologies.in/assets/images/kofi.png" alt="Ko-fi"/></a>
 </p>
 
 <p align="center">Made with PHP & ❤️ in India</p>
