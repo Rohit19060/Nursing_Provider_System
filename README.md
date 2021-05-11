@@ -95,7 +95,7 @@ You just need to use `Apache` and `MySQL` and the app will be ready to run on an
 
 ## 📂 Directory Structure
 
-- [`index.php`](https://github.com/Rohit19060/Nursing-Provider-System/blob/main/index.php "Nursing Provider System"): Main entry file for the app
+- [`./index.php`](https://github.com/Rohit19060/Nursing-Provider-System/blob/main/index.php "Nursing Provider System"): Main entry file for the app
 
 - `Other Directories` The Purpose of the directory is according to their respective name
 
